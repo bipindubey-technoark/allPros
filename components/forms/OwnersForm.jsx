@@ -54,9 +54,9 @@ function OwnersForm() {
             <Grid container spacing={2}>
                 <Grid item xs={12} sm={6}>
                     <Field
-                        name="restaurentName"
+                        name="restaurantName"
                         component={TextField}
-                        label="Restaurent Name"
+                        label="Restaurant Name"
                         fullWidth
                     />
                 </Grid>

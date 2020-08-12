@@ -48,11 +48,11 @@ function ViewOwner() {
     const router = useRouter();
     const [owner, setOwner] = useState({
         id: 4,
-        restaurentName: "Royal Club",
+        restaurantName: "Royal Club",
         email: "royal@club.com",
-        contactNo: "7893849894",
+        contactNo: "(541) 754-3010",
         businessType: "Bar or Nightclub",
-        mobileNo: "898432432",
+        mobileNo: "(541) 754-3010",
         address: "Lane 4, Lower Parel Road, Near Lake Hospital, Australia",
         duration: "4 Year",
         hours: "8 Hours",

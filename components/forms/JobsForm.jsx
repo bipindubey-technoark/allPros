@@ -39,9 +39,9 @@ function JobsForm() {
             <Grid container spacing={2}>
                 <Grid item xs={6}>
                     <Field
-                        name="restaurentName"
+                        name="restaurantName"
                         component={TextField}
-                        label="Restaurent Name"
+                        label="Restaurant Name"
                         fullWidth
                     />
                 </Grid>
@@ -49,7 +49,7 @@ function JobsForm() {
                     <Field
                         name="address"
                         component={TextField}
-                        label="Restaurent Address"
+                        label="Restaurant Address"
                         fullWidth
                     />
                 </Grid>

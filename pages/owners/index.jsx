@@ -4,23 +4,23 @@ import {
     IconButton,
     Typography,
     Paper,
-} from "@material-ui/core";
-import AddIcon from "@material-ui/icons/Add";
-import EditIcon from "@material-ui/icons/Edit";
-import { useRouter } from "next/router";
-import React from "react";
-import { Table } from "../../components/tables";
-import Layout from "../../layout";
-import { useEffect } from "react";
-import { useState } from "react";
-import api from "../../lib/api";
-import CircularLoader from "../../components/loader/CircularLoader";
-import ListAltIcon from "@material-ui/icons/ListAlt";
-import VisibilityIcon from "@material-ui/icons/Visibility";
-import BlockIcon from "@material-ui/icons/Block";
-import { useSnackbar } from "../../lib/context";
-import CheckIcon from "@material-ui/icons/Check";
-import ThumbUpIcon from "@material-ui/icons/ThumbUp";
+} from '@material-ui/core';
+import AddIcon from '@material-ui/icons/Add';
+import EditIcon from '@material-ui/icons/Edit';
+import { useRouter } from 'next/router';
+import React from 'react';
+import { Table } from '../../components/tables';
+import Layout from '../../layout';
+import { useEffect } from 'react';
+import { useState } from 'react';
+import api from '../../lib/api';
+import CircularLoader from '../../components/loader/CircularLoader';
+import ListAltIcon from '@material-ui/icons/ListAlt';
+import VisibilityIcon from '@material-ui/icons/Visibility';
+import BlockIcon from '@material-ui/icons/Block';
+import { useSnackbar } from '../../lib/context';
+import CheckIcon from '@material-ui/icons/Check';
+import ThumbUpIcon from '@material-ui/icons/ThumbUp';
 import WorkIcon from '@material-ui/icons/Work';
 
 function MembersPage() {
@@ -29,63 +29,63 @@ function MembersPage() {
     const [owner, setOwner] = useState([
         {
             id: 1,
-            restaurentName: "Go Foodie",
-            email: "gofoodie@gmail.com",
-            contactNo: "7893849894",
-            businessType: "Catering & Events",
-            MobileNo:'898432432',
-            Address:'Lane 4, Lower Parel Road, Near Lake Hospital, Australia',
-            duration:'4 Year',
-            hours:'8 Hours',
-            status: "Active",
+            restaurantName: 'Go Foodie',
+            email: 'gofoodie@gmail.com',
+            contactNo: '(541) 754-3010',
+            businessType: 'Catering & Events',
+            MobileNo: '(541) 754-3010',
+            Address: 'Lane 4, Lower Parel Road, Near Lake Hospital, Australia',
+            duration: '4 Year',
+            hours: '8 Hours',
+            status: 'Active',
         },
         {
             id: 2,
-            restaurentName: "Zafran",
-            email: "customer@zafran.com",
-            contactNo: "7893849894",
-            businessType: "Fine Dinning",
-            MobileNo:'898432432',
-            Address:'Lane 4, Lower Parel Road, Near Lake Hospital, Australia',
-            duration:'4 Year',
-            hours:'8 Hours',
-            status: "Active",
+            restaurantName: 'Zafran',
+            email: 'customer@zafran.com',
+            contactNo: '(541) 754-3010',
+            businessType: 'Fine Dinning',
+            MobileNo: '(541) 754-3010',
+            Address: 'Lane 4, Lower Parel Road, Near Lake Hospital, Australia',
+            duration: '4 Year',
+            hours: '8 Hours',
+            status: 'Active',
         },
         {
             id: 3,
-            restaurentName: "Aqua Restaurent",
-            email: "aqua@aqua.com",
-            contactNo: "7893849894",
-            businessType: "Casual Dinning",
-            MobileNo:'898432432',
-            Address:'Lane 4, Lower Parel Road, Near Lake Hospital, Australia',
-            duration:'4 Year',
-            hours:'8 Hours',
-            status: "Inactive",
+            restaurantName: 'Aqua Restaurant',
+            email: 'aqua@aqua.com',
+            contactNo: '(541) 754-3010',
+            businessType: 'Casual Dinning',
+            MobileNo: '(541) 754-3010',
+            Address: 'Lane 4, Lower Parel Road, Near Lake Hospital, Australia',
+            duration: '4 Year',
+            hours: '8 Hours',
+            status: 'Inactive',
         },
         {
             id: 4,
-            restaurentName: "Royal Club",
-            email: "royal@club.com",
-            contactNo: "7893849894",
-            businessType: "Bar or Nightclub",
-            MobileNo:'898432432',
-            Address:'Lane 4, Lower Parel Road, Near Lake Hospital, Australia',
-            duration:'4 Year',
-            hours:'8 Hours',
-            status: "Active",
+            restaurantName: 'Royal Club',
+            email: 'royal@club.com',
+            contactNo: '(541) 754-3010',
+            businessType: 'Bar or Nightclub',
+            MobileNo: '(541) 754-3010',
+            Address: 'Lane 4, Lower Parel Road, Near Lake Hospital, Australia',
+            duration: '4 Year',
+            hours: '8 Hours',
+            status: 'Active',
         },
         {
             id: 5,
-            restaurentName: "Salt Water Cafe",
-            email: "saltwater@club.com",
-            contactNo: "7893849894",
-            businessType: "Buffet",
-            MobileNo:'898432432',
-            Address:'Lane 4, Lower Parel Road, Near Lake Hospital, Australia',
-            duration:'4 Year',
-            hours:'8 Hours',
-            status: "Inactive",
+            restaurantName: 'Salt Water Cafe',
+            email: 'saltwater@club.com',
+            contactNo: '(541) 754-3010',
+            businessType: 'Buffet',
+            MobileNo: '(541) 754-3010',
+            Address: 'Lane 4, Lower Parel Road, Near Lake Hospital, Australia',
+            duration: '4 Year',
+            hours: '8 Hours',
+            status: 'Inactive',
         },
     ]);
     const [isLoading, setIsLoading] = useState(true);
@@ -113,7 +113,7 @@ function MembersPage() {
     //   fetchData();
     // }, []);
     const addMember = () => {
-        router.push("/members/add");
+        router.push('/members/add');
     };
 
     if (!owner) {
@@ -144,17 +144,17 @@ function MembersPage() {
                             <Table
                                 columns={[
                                     {
-                                        title: "Restaurent Name",
-                                        field: "restaurentName",
+                                        title: 'Restaurant Name',
+                                        field: 'restaurantName',
                                     },
-                                    { title: "Email", field: "email" },
+                                    { title: 'Email', field: 'email' },
                                     {
-                                        title: "Contact Number",
-                                        field: "contactNo",
+                                        title: 'Contact Number',
+                                        field: 'contactNo',
                                     },
                                     {
-                                        title: "Business Type",
-                                        field: "businessType",
+                                        title: 'Business Type',
+                                        field: 'businessType',
                                     },
                                 ]}
                                 data={owner}
@@ -165,8 +165,8 @@ function MembersPage() {
                                     paging: true,
                                     actionsColumnIndex: -1,
                                     headerStyle: {
-                                        backgroundColor: "#1f54bf",
-                                        color: "#FFF",
+                                        backgroundColor: '#1f54bf',
+                                        color: '#FFF',
                                     },
                                 }}
                                 // isLoading={isLoading}
@@ -175,7 +175,7 @@ function MembersPage() {
                                         icon: () => (
                                             <VisibilityIcon color="primary" />
                                         ),
-                                        tooltip: "View",
+                                        tooltip: 'View',
                                         onClick: (event, rowData) => {
                                             router.push(
                                                 `/owners/view/${rowData.id}`
@@ -183,16 +183,16 @@ function MembersPage() {
                                         },
                                     },
                                     {
-                                      icon: () => (
-                                          <WorkIcon color="primary" />
-                                      ),
-                                      tooltip: "Jobs",
-                                      onClick: (event, rowData) => {
-                                          router.push(
-                                              `/owners/jobs/${rowData.id}`
-                                          );
-                                      },
-                                  },
+                                        icon: () => (
+                                            <WorkIcon color="primary" />
+                                        ),
+                                        tooltip: 'Jobs',
+                                        onClick: (event, rowData) => {
+                                            router.push(
+                                                `/owners/jobs/${rowData.id}`
+                                            );
+                                        },
+                                    },
                                     // {
                                     //     icon: () => (
                                     //         <EditIcon color="primary" />

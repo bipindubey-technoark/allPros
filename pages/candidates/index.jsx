@@ -28,7 +28,7 @@ function CandidatesPage() {
             firstName: "Den",
             lastName: "Smith",
             email: "john@co",
-            phone: "987123123",
+            phone: "(541) 754-3010",
             status: "Approved",
         },
         {
@@ -36,7 +36,7 @@ function CandidatesPage() {
             firstName: "Mark",
             lastName: "Smith",
             email: "amrk@co",
-            phone: "987123123",
+            phone: "(541) 754-3010",
             status: "Approved",
         },
     ]);

@@ -47,7 +47,7 @@ function ViewJob() {
     const router = useRouter();
     const [job, setJob] = useState({
         id: 4,
-        restaurentName: "Royal Club",
+        restaurantName: "Royal Club",
         address: "Mountain View, California",
         vacancies: "5",
         experience: "2-7 Years",
